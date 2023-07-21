@@ -1,0 +1,182 @@
+@import "vars"
+
+.header
+    height: 80px
+    background: $var5
+    display: flex
+    align-items: center
+    width: 100%
+    position: fixed
+    top: 0
+    z-index: 2
+    .inner_header
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .logotype
+            display: flex
+            align-items: center
+            justify-content: center
+            font-size: 22px
+            height: 60px
+            width: fit-content
+            background: $var4
+            padding: 8px
+            color: white
+            border-radius: 5px
+            cursor: pointer
+        .menu
+            display: flex
+            justify-content: space-around
+            width: 600px
+            &_link a
+                color: $var4
+                text-transform: uppercase
+                &:hover
+                    text-decoration: underline
+.main_block
+    padding: 100px 0
+    background: black
+    .colors-buttons
+        display: flex
+        justify-content: space-between
+        margin-top: 50px
+        @media(max-width: 1200px)
+            justify-content: space-around
+            width: 900px
+            flex-wrap: wrap
+            margin-top: 0
+            margin: 0 auto
+        @media(max-width: 1100px)
+            width: 900px
+        @media(max-width: 1000px)
+            width: 800px
+        @media(max-width: 900px)
+            width: 700px
+        .btn-color
+            border-radius: 20px
+            border-color: white
+            @media (max-width: 1200px)
+                margin-top: 50px
+.footer
+    background: $var5
+    width: 100%
+    .inner_footer
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 100px
+        h2
+            text-transform: uppercase
+            color: $var4
+            font-weight: 600
+.slider_block
+    padding: 100px 0
+    background: black
+    @media(max-width: 1200px)
+        padding: 0
+    .inner_slider
+        @media(max-width: 1200px)
+            width: 1000px
+            margin: 0 auto
+        @media(max-width: 1100px)
+            width: 900px
+        @media(max-width: 1000px)
+            width: 800px
+        @media(max-width: 900px)
+            width: 700px
+        @media(max-width: 800px)
+            width: 600px
+        .slider
+            position: relative
+            width: 100%
+            height: 300px
+            overflow: hidden
+            border: 3px solid $var4
+            border-radius: 20px
+            display: flex
+            align-items: center
+            justify-content: space-between
+            padding: 0 30px
+            .slide
+                position: absolute
+                top: 60px
+                left: 0
+                width: 100%
+                height: 100%
+                display: none
+                transition: opacity 0.5s ease-in-out
+                &_card
+                    color: white
+                    margin: 0 auto
+                    width: 500px
+                    text-align: center
+                    h3
+                        color: white
+                        text-transform: uppercase
+                        font-size: 22px
+                    p
+                        font-size: 16px
+                        text-align: justify
+                        margin: 10px 0
+                    a
+                        color: $var4
+                        text-decoration: underline
+                &.active_slide
+                    display: block
+.block_video
+    background: black
+    padding: 100px 0
+    .inner_block_video
+        display: flex
+        justify-content: center
+        margin-top: 50px
+.modal
+    position: fixed
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    z-index: 2
+    background: rgba(0, 0, 0, 0.8)
+    display: none
+    &_dialog
+        max-width: 500px
+        margin: 150px auto
+    &_content
+        position: relative
+        width: 100%
+        padding: 40px
+        background-color: black
+        border: 2px solid $var4
+        border-radius: 4px
+        max-height: 80vh
+        overflow-y: auto
+        form
+            display: flex
+            flex-direction: column
+            align-items: center
+    &_close
+        position: absolute
+        top: 8px
+        right: 14px
+        font-size: 30px
+        color: red
+        opacity: 0.5
+        font-weight: 700
+        border: none
+        background-color: transparent
+        cursor: pointer
+    &_title
+        text-align: center
+        font-size: 22px
+        text-transform: uppercase
+        color: white
+.modal_input, .btn_min
+    width: 100%
+    margin-top: 10px
+    padding: 10px
+    border: 1px solid $var4
+    background: black
+    font-size: 20px

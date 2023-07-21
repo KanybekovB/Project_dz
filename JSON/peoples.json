@@ -1,0 +1,63 @@
+[
+    {
+        "name": "Jotaro",
+        "surname": "Kujo",
+        "age": 19,
+        "photo": "https://i.pinimg.com/736x/f4/f8/44/f4f844d2df5641ff28453d38117976a0.jpg",
+        "race": "Human",
+        "height": 195,
+        "gender": "Male",
+        "fromAnime": "JoJo's Bizarre Adventure",
+        "profession": "Marine biologist",
+        "biography": "Jotaro Kujo (Japanese: 空条 承太郎, Hepburn: Kūjō Jōtarō) is a fictional character in the Japanese manga series JoJo's Bizarre Adventure, written and illustrated by Hirohiko Araki. The main protagonist of the series' third story arc, Stardust Crusaders, Jotaro is depicted as a rough delinquent with a noble heart who journeys from Japan to Egypt with his grandfather, Joseph Joestar, and their allies to defeat the Joestar bloodline's sworn enemy, DIO, and save his mother's life. He has a Stand (a physical manifestation of his fighting spirit) named Star Platinum (星の白金スタープラチナ, Sutā Purachina), whose power is incredible strength, speed, and precision. Later, Star Platinum gains the ability Star Platinum: The World (スタープラチナ　ザ・ワールド, Sutā Purachina Za Wārudo), enabling Jotaro to stop time for a few seconds. Jotaro returns in subsequent story arcs of the manga as a supporting character. In Diamond Is Unbreakable, he meets his 16-year old biological uncle Josuke Higashikata. Jotaro also appears briefly in Golden Wind when he sends Koichi Hirose to Italy to spy on DIO's son, Giorno Giovanna, and in Stone Ocean to aid his daughter Jolyne Cujoh against the forces of Enrico Pucci. The siblings Yoshikage and Kei Kira take his place in the Joestar family tree in the alternate universe of JoJolion."
+    },
+    {
+        "name": "Zoro",
+        "surname": "Rononoa",
+        "age": 21,
+        "photo": "https://i.pinimg.com/originals/e7/f1/38/e7f138b5c42bc4774eee36662bcf21a8.jpg",
+        "race": "Human",
+        "height": 181,
+        "gender": "Male",
+        "fromAnime": "One Piece",
+        "profession": "Pirate",
+        "biography": "Roronoa Zoro (ロロノア・ゾロ, Roronoa Zoro, spelled as 'Roronoa Zolo' in some English adaptations), also known as 'Pirate Hunter' Zoro (海賊狩りのゾロ, Kaizoku-Gari no Zoro), is a fictional character created by Japanese manga artist Eiichiro Oda who appears in the manga series and media franchise One Piece. He first appeared in the third chapter of the One Piece manga, published in the manga magazine Weekly Shōnen Jump in 1997. Zoro is the first crewmate to join the Straw Hat Pirates, a crew of pirates captained by Monkey D. Luffy, after he is rescued by Luffy from execution. Zoro is a highly skilled swordsman and serves as one of the crew's main combatants, though he possesses an extremely poor sense of direction which recurs as a running gag throughout the series. In most voiced appearances, Zoro is voiced by actor Kazuya Nakai."
+    },
+    {
+        "name": "Erza",
+        "surname": "Scarlet",
+        "age": 19,
+        "photo": "https://i.pinimg.com/originals/23/ff/0b/23ff0b2f75e7cee0c44c4b87b8b95294.jpg",
+        "race": "Human",
+        "height": "168",
+        "gender": "Female",
+        "fromAnime": "Fairy Tail",
+        "profession": "S-Class Mage",
+        "biography": "Erza Scarlet (エルザ・スカーレット Eruza Sukāretto) is an S-Class Mage of the Fairy Tail Guild, wherein she is a member of Team Natsu. She also served as the guild's 7th Guild Master during Makarov's absence in X792. Erza is a young woman with long, scarlet hair and brown eyes. She lost her right eye as a child and now has an artificial one which was created by Porlyusica. She has a slender, voluptuous figure that Lucy Heartfilia described as 'amazing.' Her most common attire consists of a custom-made armor by Heart Kreuz smiths, a blue skirt, black boots, and diamond shaped silver earrings. Her Fairy Tail stamp is blue and is located on the middle of her left upper arm. Erza's specialty in Requip Magic allows her to requip not only armors but different outfits as well, enabling her to change her attire at any given time."
+    },
+    {
+        "name": "Albedo",
+        "surname": "",
+        "age": 25,
+        "photo": "https://w.forfun.com/fetch/13/13b16bbf663e725afdb666b8d7cde6f8.jpeg",
+        "race": "Succubus",
+        "height": "170",
+        "gender": "Female",
+        "fromAnime": "Overlord",
+        "profession": "Guardian Overseer",
+        "biography": "Albedo (アルベド) is the Overseer of the Guardians of the Great Tomb of Nazarick. She is in charge of the general management and supervision of the activities done by the seven Floor Guardians, meaning that she ranks above the other NPCs in Nazarick. She is the middle sister of the older sister Nigredo and younger sister Rubedo. Along with her sisters, she was created by Tabula Smaragdina. An impeccable beauty, Albedo is a woman with lustrous jet-black hair and the face of a goddess. She has golden irises and vertically split pupils; on her left and right temples are two thick horns protruding crookedly, and on her waist are a pair of black angel wings. Albedo wears a pure white dress with silky gloves covering her slender hands and a golden spiderweb necklace that covers her shoulders and chest. In combat, she wears an impressive black full plate armor with an unique helmet and carries a battle-axe with her."
+    },
+    {
+        "name": "Robin",
+        "surname": "Nico",
+        "age": 30,
+        "photo": "https://wallpapercave.com/wp/wp8943949.png",
+        "race": "Human",
+        "height": "188",
+        "gender": "Female",
+        "fromAnime": "One Piece",
+        "profession": "Pirate",
+        "biography": "Nico Robin, also known by her epithet 'Devil Child' and the 'Light of the Revolution', is the archaeologist of the Straw Hat Pirates and one of the Senior Officers of the Straw Hat Grand Fleet. She is the seventh member of the crew and the sixth to join, doing so at the end of the Arabasta Arc. She temporarily left the crew during the Water 7 Arc but rejoined during the Enies Lobby Arc. Robin ate the Hana Hana no Mi at a young age, giving her the power to reproduce her body parts (or her entire body) on any surface at will. As the sole survivor of the destroyed West Blue island Ohara, she is currently one of only two people in the world known to have the ability to read and decipher Poneglyphs, a skill which is considered forbidden and threatening to the World Government."
+
+    }
+]

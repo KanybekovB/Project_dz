@@ -1,0 +1,181 @@
+@import "vars"
+/* GMAIL BLOCK */
+
+.gmail_block
+    background: black
+    padding: 100px 0
+
+.inner_gmail_block
+    margin-top: 50px
+    display: flex
+    justify-content: space-evenly
+    border: 1px solid $var4
+    height: 300px
+    border-radius: 20px
+    align-items: center
+
+.form_gmail
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.form_gmail button
+    width: 100%
+    margin: 20px 0
+
+/* MOVE BLOCK */
+
+.move_block
+    background: black
+    padding: 100px 0
+
+.parent_block
+    height: 500px
+    width: 500px
+    border: 2px solid $var4
+    position: relative
+    margin: 0 auto
+
+.child_block
+    position: absolute
+    width: 50px
+    height: 50px
+    background: red
+
+.inner_move_block
+    margin-top: 50px
+
+/* STOP WATCH */
+
+.gmail_block
+    background: black
+    padding: 100px 0
+
+.inner_gmail_block
+    margin-top: 50px
+    display: flex
+    justify-content: space-evenly
+    border: 1px solid $var4
+    height: 300px
+    border-radius: 20px
+    align-items: center
+
+.form_gmail
+    display: flex
+    flex-direction: column
+    align-items: center
+    button
+        width: 100%
+        margin: 20px 0
+
+.move_block
+    background: black
+    padding: 100px 0
+
+.parent_block
+    height: 500px
+    width: 500px
+    border: 2px solid $var4
+    position: relative
+    margin: 0 auto
+
+.child_block
+    position: absolute
+    width: 50px
+    height: 50px
+    background: red
+
+.inner_move_block
+    margin-top: 50px
+
+.time
+    color: white
+    display: flex
+    justify-content: center
+    font-size: 80px
+    height: 100px
+    width: 100%
+    border-bottom: 1px solid $var4
+    margin-top: 40px
+    &_block
+        display: flex
+        width: 500px
+        justify-content: space-between
+
+    &_buttons
+        margin-top: 30px
+        width: 100%
+        display: flex
+        justify-content: space-between
+.stopwatch
+    padding: 100px 0
+    background: black
+
+.peopleCards
+    background: black
+    padding: 100px 0
+    .cardContainer
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        margin-top: 40px
+        .peopleCard 
+            display: flex
+            align-items: center
+            flex-direction: column
+            margin: 0 auto
+            width: 200px
+            height: 230px
+            border: 1px solid $var4
+            padding: 10px
+            gap: 5px
+            &:hover
+                background: $var2
+                transition: 1000ms
+                cursor: pointer
+            span
+                color: $var4
+            .peoplePhoto 
+                width: 110px
+                height: 110px
+                border-radius: 50%
+                overflow: hidden
+                border: 2px solid $var4
+                & img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    object-position: center center
+.modalPeople
+    background: rgba(0, 0, 0, 0.8)
+    display: none
+    span        
+        color: $var4
+    .modalContent
+        width: 700px
+        height: 500px
+        margin: 100px auto
+        .modalInfo
+            padding: 20px
+            .peopleInfo
+                display: flex
+                flex-direction: column
+                gap: 10px
+                .photoInfo
+                    display: flex
+                    gap: 20px
+                    .fullPhoto
+                        overflow: hidden
+                        border: 2px solid $var4
+                        width: 150px
+                        height: 150px
+                        img 
+                            width: 100%
+                            height: 100%
+                            object-fit: cover
+                            object-position: center center
+                    .info   
+                        display: flex
+                        flex-direction: column
+                        gap: 8px
+                    
