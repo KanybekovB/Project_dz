@@ -464,7 +464,7 @@ body .container input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 8px;
+  gap: 1px;
 }
 
 /* PHONE CHECKER */

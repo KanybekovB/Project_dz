@@ -180,9 +180,11 @@ request.addEventListener('load', () => {
               <span>Name: ${people.name}</span>
               <span>Surname: ${people.surname}</span>
               <span>Age: ${people.age}</span>
+              <span>Height: ${people.height}</span>
               <span>Race: ${people.race}</span>
               <span>Gender: ${people.gender}</span>
               <span>Profession: ${people.profession}</span>
+              <span>From Anime: ${people.fromAnime}</span>
             </div>
           </div>
 
