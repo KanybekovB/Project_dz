@@ -112,7 +112,7 @@ body .container input {
   font-size: 20px;
   padding-left: 5px;
   color: #F79300;
-  background: black;
+  background: #000000;
   border: 2px solid #F79300;
 }
 
@@ -122,7 +122,7 @@ body .container input {
   font-size: 20px;
   cursor: pointer;
   border: 1px solid #F79300;
-  background: black;
+  background: #000000;
   color: #F79300;
 }
 .btn:hover {
@@ -139,7 +139,7 @@ body .container input {
   width: 100px;
   height: 100px;
   background: #F79300;
-  color: black;
+  color: #000000;
   font-size: 20px;
   text-transform: uppercase;
   border-radius: 50%;
@@ -173,7 +173,7 @@ body .container input {
   position: absolute;
   width: 30px;
   height: 3px;
-  background: black;
+  background: #000000;
   left: 5px;
   border-radius: 10px;
 }
@@ -188,7 +188,7 @@ body .container input {
 
 /* GMAIL BLOCK */
 .gmail_block {
-  background: black;
+  background: #000000;
   padding: 100px 0;
 }
 
@@ -228,7 +228,7 @@ body .container input {
 
 /* MOVE BLOCK */
 .move_block {
-  background: black;
+  background: #000000;
   padding: 100px 0;
 }
 
@@ -253,7 +253,7 @@ body .container input {
 
 /* STOP WATCH */
 .gmail_block {
-  background: black;
+  background: #000000;
   padding: 100px 0;
 }
 
@@ -291,7 +291,7 @@ body .container input {
 }
 
 .move_block {
-  background: black;
+  background: #000000;
   padding: 100px 0;
 }
 
@@ -350,11 +350,11 @@ body .container input {
 
 .stopwatch {
   padding: 100px 0;
-  background: black;
+  background: #000000;
 }
 
 .peopleCards {
-  background: black;
+  background: #000000;
   padding: 100px 0;
 }
 .peopleCards .cardContainer {
@@ -469,7 +469,7 @@ body .container input {
 
 /* PHONE CHECKER */
 .phone_block {
-  background: black;
+  background: #000000;
   padding: 100px 0;
 }
 
@@ -509,7 +509,7 @@ body .container input {
 
 /* TAB SLIDER */
 .tab_slider {
-  background: black;
+  background: #000000;
   padding: 100px 0;
 }
 
@@ -568,7 +568,7 @@ body .container input {
 
 .tab_content_item_active {
   background: #F79300;
-  color: black;
+  color: #000000;
   font-weight: 600;
   border: 1px solid white;
 }
@@ -588,7 +588,7 @@ body .container input {
 
 /*------CARD SWITCHER------*/
 .phone_block {
-  background: black;
+  background: #000000;
   padding: 100px 0;
 }
 
@@ -626,7 +626,7 @@ body .container input {
 }
 
 .tab_slider {
-  background: black;
+  background: #000000;
   padding: 100px 0;
 }
 
@@ -683,7 +683,7 @@ body .container input {
 }
 .tab_content_item_active {
   background: #F79300;
-  color: black;
+  color: #000000;
   font-weight: 600;
   border: 1px solid white;
 }
@@ -702,7 +702,7 @@ body .container input {
 }
 
 .card_switcher {
-  background-color: black;
+  background-color: #000000;
   padding: 100px 0;
 }
 
@@ -812,7 +812,7 @@ body .container input {
 
 .main_block {
   padding: 100px 0;
-  background: black;
+  background: #000000;
 }
 .main_block .colors-buttons {
   display: -webkit-box;
@@ -883,7 +883,7 @@ body .container input {
 
 .slider_block {
   padding: 100px 0;
-  background: black;
+  background: #000000;
 }
 @media (max-width: 1200px) {
   .slider_block {
@@ -969,7 +969,7 @@ body .container input {
 }
 
 .block_video {
-  background: black;
+  background: #000000;
   padding: 100px 0;
 }
 .block_video .inner_block_video {
@@ -1000,7 +1000,7 @@ body .container input {
   position: relative;
   width: 100%;
   padding: 40px;
-  background-color: black;
+  background-color: #000000;
   border: 2px solid #F79300;
   border-radius: 4px;
   max-height: 80vh;
@@ -1042,6 +1042,6 @@ body .container input {
   margin-top: 10px;
   padding: 10px;
   border: 1px solid #F79300;
-  background: black;
+  background: #000000;
   font-size: 20px;
 }
