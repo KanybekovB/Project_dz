@@ -7,7 +7,7 @@
 
 body {
   font-family: "Britannic Bold", sans-serif;
-  background: #c2d0d0;
+  background: #000000;
 }
 body .container {
   width: 1200px;
@@ -584,6 +584,37 @@ body .container input {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 50px;
+}
+
+/*------CONVERTER---------*/
+.converter {
+  padding: 100px auto;
+  background-color: #000000;
+}
+.converter .inner_converter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+.converter .inner_converter div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 /*------CARD SWITCHER------*/

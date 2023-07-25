@@ -163,7 +163,6 @@ request.addEventListener('load', () => {
         <span>${people.surname} ${people.name}</span>
         <span>Age: ${people.age}</span>
         <span>Race: ${people.race}</span>
-
         <span>Gender: ${people.gender}</span>   
         `
         cardContainer.append(peopleCard)
@@ -202,8 +201,9 @@ request.addEventListener('load', () => {
         cardClose.onclick = () => closeCardModal()
         modalPeople.onclick = (event) => event.target === modalPeople && closeCardModal()
     })
-    
 });
+
+
 //* STOPWATCH with setTimeout NOT FULL VERSION
 // function start_button() {
 //   mlSeconds_start++;

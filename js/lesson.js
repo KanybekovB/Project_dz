@@ -63,3 +63,57 @@ const autoSlider = () => {
     showTabContent(indexCount)
 }
 interval = setInterval(autoSlider, 3000)
+
+
+//* CONVERTOR
+
+const som = document.querySelector('#som')
+const usd = document.querySelector('#usd')
+const eur = document.querySelector('#eur')
+const won = document.querySelector('#won')
+const yen = document.querySelector('#yen')
+
+const convert = (element, targets, isTrue) => {
+  element.oninput = (event) => {
+    const request = new XMLHttpRequest();
+    request.open('GET', '../JSON/convert.json');
+    request.setRequestHeader("Content-Type", "application/json");
+    request.send();
+    request.onload = () => {
+      const response = JSON.parse(request.response);
+      const responses = [response.usd, response.eur, response.won, response.yen];
+      const targetSom = targets.find(targetElement => targetElement === som);
+      let forStatus;
+      targets.forEach((target, i) => {
+        if (isTrue) {
+          target.value = (element.value / responses[i]).toFixed(2);
+          forStatus = false
+        } else {
+          if (target === targetSom) {
+            target.value = (element.value * responses[i]).toFixed(2);
+          }
+          forStatus = true;
+        }
+      });
+      if(forStatus){
+        for (var j = 0; j < targets.length; j++) {
+            if (targets[j] !== targetSom) {
+            targets[j].value = (targetSom.value / responses[j]).toFixed(2);
+            console.log(targets[j]);
+            }
+        }
+    }
+      if (element.value === '') {
+        targets.forEach(target => {
+          target.value = '';
+        });
+      }
+    };
+  };
+};
+
+convert(som, [usd, eur, won, yen], true);
+convert(usd, [som, eur, won, yen], false);
+convert(eur, [usd, som, won, yen], false);
+convert(won, [usd, eur, som, yen], false);
+convert(yen, [usd, eur, won, som], false);

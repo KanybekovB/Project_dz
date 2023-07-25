@@ -1,65 +1,75 @@
-const phoneInput = document.querySelector('#phone_input');
-const phoneCheck = document.querySelector('#phone_button');
-const phoneResult = document.querySelector('#phone_result');
+// RANDOM COLOR GENERATOR
 
-const regExp = /^\+996 \d{3} \d{2}-\d{2}-\d{2}/
+const buttonsColor = document.querySelectorAll('.btn-color')
+const javaScript = document.querySelector('#js-color')
 
-phoneCheck.addEventListener('click', () => {
-    if(regExp.test(phoneInput.value)) {
-        phoneResult.innerHTML = 'Ok'
-        phoneResult.style.color = `green`
-    }else{
-        phoneResult.innerHTML = 'Not ok'
-        phoneResult.style.color = `red`
+const generateRandomColor = () => {
+    const hexCodes = '0123456789ABCDEF'
+    let color = ''
+    for (let i = 0; i < 6; i++) {
+        color += hexCodes[Math.floor(Math.random() * hexCodes.length)]
     }
-})
+    return '#' + color
+}
 
-//*TAB SLIDER
-
-const tabContent = document.querySelectorAll('.tab_content_block')
-const tabs = document.querySelectorAll('.tab_content_item')
-const tabsParent = document.querySelector('.tab_content_items')
-let indexCount;
-let interval;
-
-const hideTabContent = () => {
-    tabContent.forEach(item => {
-        item.style.display = 'none'
-    })
-    tabs.forEach(item => {
-        item.classList.remove('tab_content_item_active')
+const setRandomColors = () => {
+    buttonsColor.forEach((buttonColor) => {
+        buttonColor.innerHTML = generateRandomColor()
+        buttonColor.onclick = (event) => javaScript.style.color = event.target.innerHTML
     })
 }
 
-const showTabContent = (index = 0) => {
-    tabContent[index].style.display = 'block'
-    tabs[index].classList.add('tab_content_item_active')
-    indexCount = index
-}
-
-hideTabContent()
-showTabContent()
-
-tabsParent.onclick = (event) => {
-    const targetElement = event.target
-    if(targetElement.classList.contains('tab_content_item')) {
-        tabs.forEach((tab, tabIndex) => {
-            if(targetElement === tab) {
-                hideTabContent()
-                showTabContent(tabIndex)
-                clearInterval(interval)
-                interval = setInterval(autoSlider, 3000)
-            }
-        })
+window.onload = () => setRandomColors()
+window.onkeydown = (event) => {
+    if (event.code.toLowerCase() === 'space') {
+        event.preventDefault()
+        setRandomColors()
     }
 }
 
-const autoSlider = () => {
-    indexCount++;
-    if(indexCount > tabs.length -1) {
-        indexCount = 0
-    }
-    hideTabContent()
-    showTabContent(indexCount)
+// SLIDER BLOCK
+
+const slides = document.querySelectorAll('.slide')
+const next = document.querySelector('#next')
+const prev = document.querySelector('#prev')
+let index = 0
+
+const hideSlide = () => {
+    slides.forEach((slide) => {
+        slide.style.opacity = 0
+        slide.classList.remove('active_slide')
+    })
 }
-interval = setInterval(autoSlider, 3000)
+const showSlide = (i = 0) => {
+    slides[i].style.opacity = 1
+    slides[i].classList.add('active_slide')
+}
+
+hideSlide()
+showSlide(index)
+
+
+const autoSlider = (i = 0) => {
+    setInterval(() => {
+        i++
+        if (i > slides.length - 1) {
+            i = 0
+        }
+        hideSlide()
+        showSlide(i)
+    }, 10000)
+}
+
+next.onclick = () => {
+    index < slides.length - 1 ? index++ : index = 0
+    hideSlide()
+    showSlide(index)
+}
+
+prev.onclick = () => {
+    index > 0 ? index-- : index = slides.length - 1
+    hideSlide()
+    showSlide(index)
+}
+
+autoSlider(index)

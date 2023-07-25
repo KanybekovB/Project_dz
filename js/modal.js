@@ -19,13 +19,14 @@ modalTrigger.onclick = () => openModal();
 
 closeModalButton.onclick = () => closeModal();
 
-modal.onclick = (event) => event.target === modal  && closeModal()
+// modal.onclick = (event) => event.target === modal  && closeModal()
 
 function scrollFn() {
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
         openModal()
-        removeEventListener('scroll', scrollFn)
+        window.removeEventListener('scroll', scrollFn)
     }
   }
   
 window.addEventListener('scroll', scrollFn);
+// window.onscroll = () => scrollFn();
