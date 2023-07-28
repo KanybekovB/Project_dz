@@ -30,11 +30,29 @@
             display: flex
             justify-content: space-around
             width: 600px
+            @media(max-width: 900px)
+                display: block
+                position: absolute
+                left: -200px
+                top: 0
+                background-color: $var4
+                width: 200px
+                padding: 100px 20px 20px 20px
+                transition: transform 0.5s
             &_link a
                 color: $var4
                 text-transform: uppercase
                 &:hover
                     text-decoration: underline
+                @media(max-width: 900px)
+                    color: $var7
+                    font-size: 21px
+                    display: block
+.header.open .menu
+    @media(max-width: 900px)
+        transform: translateX(100%)
+    
+
 .main_block
     padding: 100px 0
     background: $var7
@@ -180,3 +198,4 @@
     border: 1px solid $var4
     background: $var7
     font-size: 20px
+

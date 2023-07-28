@@ -85,3 +85,13 @@ const bindPostData = (form) => {
     
 // }
 // postData(form)
+
+//* BURGER MENU
+const header = document.querySelector('.header');
+const burger = document.querySelector('.burger_btn');
+const menu = document.querySelector('.menu');
+
+burger.onclick = () => {
+    header.classList.toggle('open')
+
+}

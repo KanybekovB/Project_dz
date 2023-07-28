@@ -146,6 +146,13 @@ body .container input {
   font-weight: 800;
   z-index: 1;
 }
+@media (max-width: 900px) {
+  .btn-slide {
+    border-radius: 5px;
+    height: 50px;
+    margin-top: 200px;
+  }
+}
 .btn-slide:hover {
   background: #F79300;
   cursor: pointer;
@@ -163,11 +170,18 @@ body .container input {
   position: relative;
   width: 40px;
   height: 40px;
-  border: none;
   cursor: pointer;
   background-color: #F79300;
   border-radius: 10px;
   display: none;
+  z-index: 2;
+  border: 1px solid #000000;
+  margin-left: 20px;
+}
+@media (max-width: 900px) {
+  .burger_btn {
+    display: block;
+  }
 }
 .burger_btn span {
   position: absolute;
@@ -176,6 +190,10 @@ body .container input {
   background: #000000;
   left: 5px;
   border-radius: 10px;
+  -webkit-transition: opacity 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+  transition: transform 0.5s, opacity 0.5s, background-color 0.5s, -webkit-transform 0.5s;
 }
 .burger_btn span:nth-child(1) {
   -webkit-transform: translateY(-10px);
@@ -184,6 +202,18 @@ body .container input {
 .burger_btn span:nth-child(3) {
   -webkit-transform: translateY(10px);
           transform: translateY(10px);
+}
+
+.header.open .burger_btn span:nth-child(1) {
+  -webkit-transform: translateY(0) rotate(45deg);
+          transform: translateY(0) rotate(45deg);
+}
+.header.open .burger_btn span:nth-child(2) {
+  opacity: 0;
+}
+.header.open .burger_btn span:nth-child(3) {
+  -webkit-transform: translateY(0) rotate(-45deg);
+          transform: translateY(0) rotate(-45deg);
 }
 
 /* GMAIL BLOCK */
@@ -846,12 +876,41 @@ body .container input {
       justify-content: space-around;
   width: 600px;
 }
+@media (max-width: 900px) {
+  .header .inner_header .menu {
+    display: block;
+    position: absolute;
+    left: -200px;
+    top: 0;
+    background-color: #F79300;
+    width: 200px;
+    padding: 100px 20px 20px 20px;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+  }
+}
 .header .inner_header .menu_link a {
   color: #F79300;
   text-transform: uppercase;
 }
 .header .inner_header .menu_link a:hover {
   text-decoration: underline;
+}
+@media (max-width: 900px) {
+  .header .inner_header .menu_link a {
+    color: #000000;
+    font-size: 21px;
+    display: block;
+  }
+}
+
+@media (max-width: 900px) {
+  .header.open .menu {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
 }
 
 .main_block {
