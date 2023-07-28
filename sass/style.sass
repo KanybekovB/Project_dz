@@ -14,6 +14,10 @@
         display: flex
         align-items: center
         justify-content: space-between
+        @media(max-width: 600px)
+            #btn-get
+                width: 125px
+                
         .logotype
             display: flex
             align-items: center
@@ -72,11 +76,17 @@
             width: 800px
         @media(max-width: 900px)
             width: 700px
+        @media(max-width: 800px)
+            width: 600px    
+        @media(max-width: 700px)
+            width: 500px
         .btn-color
             border-radius: 20px
             border-color: white
             @media (max-width: 1200px)
                 margin-top: 50px
+            @media(max-width: 700px)
+                width: 150px
 .footer
     background: $var5
     width: 100%
@@ -106,6 +116,8 @@
             width: 700px
         @media(max-width: 800px)
             width: 600px
+        @media(max-width: 700px)
+            width: 500px
         .slider
             position: relative
             width: 100%
@@ -117,6 +129,8 @@
             align-items: center
             justify-content: space-between
             padding: 0 30px
+            @media(max-width:700px)
+                width: 500px
             .slide
                 position: absolute
                 top: 60px
@@ -125,6 +139,8 @@
                 height: 100%
                 display: none
                 transition: opacity 0.5s ease-in-out
+                @media(max-width: 700px)
+                    top: 30px
                 &_card
                     color: white
                     margin: 0 auto
@@ -138,6 +154,8 @@
                         font-size: 16px
                         text-align: justify
                         margin: 10px 0
+                        @media(max-width: 700px)
+                            margin: 10px 30px
                     a
                         color: $var4
                         text-decoration: underline

@@ -43,6 +43,16 @@ body .container {
     width: 600px;
   }
 }
+@media (max-width: 700px) {
+  body .container {
+    width: 500px;
+  }
+}
+@media (max-width: 600px) {
+  body .container {
+    width: 500px;
+  }
+}
 body .container a {
   text-decoration: none;
 }
@@ -75,6 +85,11 @@ body .container h1 {
 @media (max-width: 900px) {
   body .container h1 {
     font-size: 44px;
+  }
+}
+@media (max-width: 700px) {
+  body .container h1 {
+    font-size: 39px;
   }
 }
 body .container h2 {
@@ -145,6 +160,8 @@ body .container input {
   border-radius: 50%;
   font-weight: 800;
   z-index: 1;
+  -webkit-transition: 1000ms;
+  transition: 1000ms;
 }
 @media (max-width: 900px) {
   .btn-slide {
@@ -847,6 +864,11 @@ body .container input {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media (max-width: 600px) {
+  .header .inner_header #btn-get {
+    width: 125px;
+  }
+}
 .header .inner_header .logotype {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -952,6 +974,16 @@ body .container input {
     width: 700px;
   }
 }
+@media (max-width: 800px) {
+  .main_block .colors-buttons {
+    width: 600px;
+  }
+}
+@media (max-width: 700px) {
+  .main_block .colors-buttons {
+    width: 500px;
+  }
+}
 .main_block .colors-buttons .btn-color {
   border-radius: 20px;
   border-color: white;
@@ -959,6 +991,11 @@ body .container input {
 @media (max-width: 1200px) {
   .main_block .colors-buttons .btn-color {
     margin-top: 50px;
+  }
+}
+@media (max-width: 700px) {
+  .main_block .colors-buttons .btn-color {
+    width: 150px;
   }
 }
 
@@ -1019,6 +1056,11 @@ body .container input {
     width: 600px;
   }
 }
+@media (max-width: 700px) {
+  .slider_block .inner_slider {
+    width: 500px;
+  }
+}
 .slider_block .inner_slider .slider {
   position: relative;
   width: 100%;
@@ -1037,6 +1079,11 @@ body .container input {
           justify-content: space-between;
   padding: 0 30px;
 }
+@media (max-width: 700px) {
+  .slider_block .inner_slider .slider {
+    width: 500px;
+  }
+}
 .slider_block .inner_slider .slider .slide {
   position: absolute;
   top: 60px;
@@ -1046,6 +1093,11 @@ body .container input {
   display: none;
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
+}
+@media (max-width: 700px) {
+  .slider_block .inner_slider .slider .slide {
+    top: 30px;
+  }
 }
 .slider_block .inner_slider .slider .slide_card {
   color: white;
@@ -1062,6 +1114,11 @@ body .container input {
   font-size: 16px;
   text-align: justify;
   margin: 10px 0;
+}
+@media (max-width: 700px) {
+  .slider_block .inner_slider .slider .slide_card p {
+    margin: 10px 30px;
+  }
 }
 .slider_block .inner_slider .slider .slide_card a {
   color: #F79300;
