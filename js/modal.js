@@ -36,31 +36,44 @@ window.addEventListener('scroll', scrollFn);
 
 // const form = document.querySelector('.form');
 
-const postData = (url, data) => {
-    const response = fetch(url, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: data
-    });
-    return response
-}
+// const postData = (url, data) => {
+//     const response = fetch(url, {
+//         method: 'POST',
+//         headers: {'Content-Type': 'application/json'},
+//         body: data
+//     });
+//     return response
+// }
 
-const bindPostData = (form) => {
-    form.onsubmit =(event) => {
-        event.preventDefault();
-        const formData = new FormData(form)
-        const obj = {}
-        formData.forEach((item, i) => {
-            obj[i] = item;
-        })
-        const json = JSON.stringify(obj)
-        if (window.location.pathname === '/Project_dz/index.html') {
-            postData('server.php', json)
-        } else {
-            postData('server.php', json)
-        }
-    }
-}
+// const postData = (url, data) => {
+//     try {
+//         const response = fetch(url, {
+//             method: 'POST',
+//             headers: {'Content-Type': 'application/json'},
+//             body: JSON.stringify(data)
+//         })
+//         return response
+//     } catch (error) {
+//         console.error('Ошибка при загрузке данных:', error);
+//     }
+// }
+
+// const bindPostData = (form) => {
+//     form.onsubmit =(event) => {
+//         event.preventDefault();
+//         const formData = new FormData(form)
+//         const obj = {}
+//         formData.forEach((item, i) => {
+//             obj[i] = item;
+//         })
+//         const json = JSON.stringify(obj)
+//         if (window.location.pathname === '/Project_dz/index.html') {
+//             postData('server.php', json)
+//         } else {
+//             postData('server.php', json)
+//         }
+//     }
+// }
 
 // const postData = (form) => {
 //     form.addEventListener('submit', (event) => {

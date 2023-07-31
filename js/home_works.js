@@ -61,7 +61,6 @@ let interval; // * ДЛЯ ПОЛУЧЕНИЯ 'setInterval' и дальнейше
 let isRunning = false; // * ДЛЯ ТОГО ЧТО БЫ ПРОВЕРИТЬ В КАКОМ СОСТОЯНИИ СЕКУНДОМЕР В РАБОЧЕМ ИЛИ НЕТ
 let stopWatchStatus = false;
 
-
 function start_button() {
   mlSeconds_start++;
   ml_Seconds.innerHTML = `${mlSeconds_start}`;
@@ -92,52 +91,57 @@ let startResume = () => {
   if (!isRunning) {
     clearInterval(interval);
     interval = setInterval(start_button, 16);
-    isRunning = true
-  }     
-}
+    isRunning = true;
+  }
+};
 
 start.onclick = () => {
-  startResume()
+  startResume();
   stopWatchStatus = true;
-}
+};
 
 stop.onclick = () => {
-  if(!stopWatchStatus){
-    alert(`Секундомер ещё не запущен! Нажмите на кнопку ${start.innerHTML} для запуска.`)
-  }else{
+  if (!stopWatchStatus) {
+    alert(
+      `Секундомер ещё не запущен! Нажмите на кнопку ${start.innerHTML} для запуска.`
+    );
+  } else {
     clearInterval(interval);
     isRunning = false;
   }
-  
 };
 
 reset.onclick = () => {
-  if(!stopWatchStatus){
-    alert(`Секундомер ещё не запущен! Нажмите на кнопку ${start.innerHTML} для запуска.`)
-  }else{
-    resetTimer()
+  if (!stopWatchStatus) {
+    alert(
+      `Секундомер ещё не запущен! Нажмите на кнопку ${start.innerHTML} для запуска.`
+    );
+  } else {
+    resetTimer();
     stopWatchStatus = false;
   }
 };
 
 resume.onclick = () => {
-  if(!stopWatchStatus){
-    alert(`Секундомер ещё не запущен! Нажмите на кнопку ${start.innerHTML} для запуска.`)
-  }else{
-    startResume()
+  if (!stopWatchStatus) {
+    alert(
+      `Секундомер ещё не запущен! Нажмите на кнопку ${start.innerHTML} для запуска.`
+    );
+  } else {
+    startResume();
   }
-}
+};
 
 //* CARD WITH DATA
-const peopleCards = document.querySelector('peopleCards')
-const cardContainer = document.querySelector('.cardContainer')
-const modalPeople = document.querySelector('.modalPeople')
-const modalContent = document.querySelector('.modalContent')
-const modalInfo = document.querySelector('.modalInfo')
-const cardClose = document.querySelector('.cardClose')
+const peopleCards = document.querySelector("peopleCards");
+const cardContainer = document.querySelector(".cardContainer");
+const modalPeople = document.querySelector(".modalPeople");
+const modalContent = document.querySelector(".modalContent");
+const modalInfo = document.querySelector(".modalInfo");
+const cardClose = document.querySelector(".cardClose");
 
-const peopleInfo = document.createElement('div')
-peopleInfo.setAttribute('class', 'peopleInfo')  
+const peopleInfo = document.createElement("div");
+peopleInfo.setAttribute("class", "peopleInfo");
 
 // const modalContent = document.createElement('div')
 // modalContent.setAttribute('class', 'modalContent ')
@@ -147,105 +151,123 @@ peopleInfo.setAttribute('class', 'peopleInfo')
 // const afterModal = document.querySelector(".modal")
 // modalPeople.append(modalContent)
 // afterModal.insertAdjacentElement('afterend', modalPeople)
-const request = new XMLHttpRequest(); // 1) Создание запроса
-request.open("GET", "../JSON/peoples.json"); // 2) обьявление метожа запроса и указывание пути
-request.setRequestHeader("Content-Type", "application/json"); // 3) Указывание заголовка
-request.send();  // 4) Отправка запроса
-request.addEventListener('load', () => {
-    const data = JSON.parse(request.response)
-    data.forEach(people => {
-        const peopleCard = document.createElement('div')
-        peopleCard.setAttribute('class', 'peopleCard')
-        peopleCard.innerHTML = `
-        <div class="peoplePhoto">
+// const request = new XMLHttpRequest();
+// request.open("GET", "../JSON/peoples.json");
+// request.setRequestHeader("Content-Type", "application/json");
+// request.send();
+// request.addEventListener("load", () => {
+//   const data = JSON.parse(request.response);
+//   data.forEach((people) => {
+//     const peopleCard = document.createElement("div");
+//     peopleCard.setAttribute("class", "peopleCard");
+//     peopleCard.innerHTML = `
+//         <div class="peoplePhoto">
+//             <img src="${people.photo}"/>
+//         </div>
+//         <span>${people.surname} ${people.name}</span>
+//         <span>Age: ${people.age}</span>
+//         <span>Race: ${people.race}</span>
+//         <span>Gender: ${people.gender}</span>   
+//         `;
+//     cardContainer.append(peopleCard);
+
+//     peopleCard.onclick = () => {
+//       modalPeople.style.display = "block";
+//       document.body.style.overflow = "hidden";
+//       peopleInfo.innerHTML = `
+//           <div class="photoInfo">
+//             <div class="fullPhoto">
+//               <img src="${people.photo}"/>
+//             </div>
+//             <div class="info">
+//               <span>Name: ${people.name}</span>
+//               <span>Surname: ${people.surname}</span>
+//               <span>Age: ${people.age}</span>
+//               <span>Height: ${people.height}</span>
+//               <span>Race: ${people.race}</span>
+//               <span>Gender: ${people.gender}</span>
+//               <span>Profession: ${people.profession}</span>
+//               <span>From Anime: ${people.fromAnime}</span>
+//             </div>
+//           </div>
+
+//           <div class="biography">
+//             <span>Biography: ${people.biography}</span>
+//           </div>
+//           `;
+//       modalInfo.append(peopleInfo);
+//     };
+//     const closeCardModal = () => {
+//       modalPeople.style.display = "none";
+//       document.body.style.overflow = "auto";
+//       peopleInfo.remove();
+//     };
+//     cardClose.onclick = () => closeCardModal();
+//     modalPeople.onclick = (event) =>
+//       event.target === modalPeople && closeCardModal();
+//   });
+// });
+
+const fetchUserData = async () => {
+  try {
+    const response = await fetch("../JSON/peoples.json");
+    const data = await response.json();
+    data.forEach(peopleData)
+  } catch (error) {
+    console.error('Ошибка при загрузке данных:', error);
+  }
+  
+};
+
+const peopleData = (people) => {
+  const peopleCard = document.createElement("div");
+  peopleCard.setAttribute("class", "peopleCard");
+  peopleCard.innerHTML = `
+      <div class="peoplePhoto">
+          <img src="${people.photo}"/>
+      </div>
+      <span>${people.surname} ${people.name}</span>
+      <span>Age: ${people.age}</span>
+      <span>Race: ${people.race}</span>
+      <span>Gender: ${people.gender}</span>   
+      `;
+  cardContainer.append(peopleCard)
+  
+  peopleCard.onclick = () => {
+    modalPeople.style.display = "block";
+    document.body.style.overflow = "hidden";
+    peopleInfo.innerHTML = `
+        <div class="photoInfo">
+          <div class="fullPhoto">
             <img src="${people.photo}"/>
+          </div>
+          <div class="info">
+            <span>Name: ${people.name}</span>
+            <span>Surname: ${people.surname}</span>
+            <span>Age: ${people.age}</span>
+            <span>Height: ${people.height}</span>
+            <span>Race: ${people.race}</span>
+            <span>Gender: ${people.gender}</span>
+            <span>Profession: ${people.profession}</span>
+            <span>From Anime: ${people.fromAnime}</span>
+          </div>
         </div>
-        <span>${people.surname} ${people.name}</span>
-        <span>Age: ${people.age}</span>
-        <span>Race: ${people.race}</span>
-        <span>Gender: ${people.gender}</span>   
-        `
-        cardContainer.append(peopleCard)
 
-        peopleCard.onclick = () => {
-          modalPeople.style.display = 'block'
-          document.body.style.overflow = 'hidden';  
-          peopleInfo.innerHTML = `
-          <div class="photoInfo">
-            <div class="fullPhoto">
-              <img src="${people.photo}"/>
-            </div>
-            <div class="info">
-              <span>Name: ${people.name}</span>
-              <span>Surname: ${people.surname}</span>
-              <span>Age: ${people.age}</span>
-              <span>Height: ${people.height}</span>
-              <span>Race: ${people.race}</span>
-              <span>Gender: ${people.gender}</span>
-              <span>Profession: ${people.profession}</span>
-              <span>From Anime: ${people.fromAnime}</span>
-            </div>
-          </div>
+        <div class="biography">
+          <span>Biography: ${people.biography}</span>
+        </div>
+        `;
+    modalInfo.append(peopleInfo);
+    const closeCardModal = () => {
+            modalPeople.style.display = "none";
+            document.body.style.overflow = "auto";
+            peopleInfo.remove();
+          };
+          cardClose.onclick = () => closeCardModal();
+          modalPeople.onclick = (event) =>
+            event.target === modalPeople && closeCardModal();
+  }
+}
 
-          <div class="biography">
-            <span>Biography: ${people.biography}</span>
-          </div>
-          `
-          modalInfo.append(peopleInfo)
-        }
-        const closeCardModal = () => {
-          modalPeople.style.display = 'none'
-          document.body.style.overflow = 'auto';
-          peopleInfo.remove()
-        }
-        cardClose.onclick = () => closeCardModal()
-        modalPeople.onclick = (event) => event.target === modalPeople && closeCardModal()
-    })
-});
+fetchUserData();
 
-
-//* STOPWATCH with setTimeout NOT FULL VERSION
-// function start_button() {
-//   mlSeconds_start++;
-//   ml_Seconds.innerHTML = `${mlSeconds_start}`;
-//   if (mlSeconds_start === 99) {
-//     seconds_start++;
-//     seconds.innerHTML = `${seconds_start}`;
-//     mlSeconds_start = 0;
-//   }
-//   if (seconds_start === 59) {
-//     minutes_start++;
-//     minutes.innerHTML = `${minutes_start}`;
-//     seconds_start = 0;
-//   }
-//   forClearInterval = setTimeout(start_button, 16)
-// }
-
-// function resetTimer() {
-//   clearTimeout(forClearInterval);
-//   mlSeconds_start = 0;
-//   seconds_start = 0;
-//   minutes_start = 0;
-//   ml_Seconds.innerHTML = '00';
-//   seconds.innerHTML = '00';
-//   minutes.innerHTML = '00';
-//   isRunning = false;
-// }
-
-// start.onclick = () => {
-//   if(isRunning){
-//     clearTimeout(forClearInterval);
-//     setTimeout(start_button, 16);
-//   }else{
-//     isRunning = true;
-//     setTimeout(start_button, 16);
-//   }
-// };
-
-// stop.onclick = () => {
-//   clearTimeout(forClearInterval);
-// };
-
-// reset.onclick = () => {
-//   resetTimer()
-// };

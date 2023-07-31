@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Works</title>
     <link rel="stylesheet" href="../css/bundle.css">
+    <title>Cards</title>
 </head>
 <body>
-
-<div class="wrapper">
-    <div class="header">
+    <div class="wrapper">
+        <div class="header">
         <button class="burger_btn">
             <span></span>
             <span></span>
@@ -40,54 +39,10 @@
             </div>
         </div>
     </div>
-    <div class="gmail_block">
+
+    <div class="cards">
         <div class="container">
-            <h3>Home work 1 (part 1)</h3>
-            <div class="inner_gmail_block">
-                <div class="form_gmail">
-                    <label for="gmail_input"></label>
-                    <input type="text" id="gmail_input" placeholder="your gmail">
-                    <button class="btn" id="gmail_button">Check gmail</button>
-                    <span class="checker" id="gmail_result"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="move_block">
-        <div class="container">
-            <h3>Home work 1 (part 2)</h3>
-            <div class="inner_move_block">
-                <div class="parent_block">
-                    <div class="child_block"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="stopwatch">
-        <div class="container">
-            <h3>Home work 2 </h3>
-            <div class="time">
-                <div class="time_block">
-                    <div class="interval" id="minutes">00</div>
-                    <div class="break">:</div>
-                    <div class="interval" id="seconds">00</div>
-                    <div class="break">:</div>
-                    <div class="interval" id="ml-seconds">00</div>
-                </div>
-            </div>
-            <div class="time_buttons">
-                <button class="btn" id="start">Start</button>
-                <button class="btn" id="stop">Stop</button>
-                <button class="btn" id="resume">Resume</button>
-                <button class="btn" id="reset">Reset</button>
-            </div>
-        </div>
-    </div>
-    
-    <div class="peopleCards">
-        <div class="container">
-            <h3>Home work 4</h3>
-            <div class="cardContainer"></div>
+            <div class="inner_cards"></div>
         </div>
     </div>
 
@@ -115,17 +70,7 @@
         </div>
     </div>
 </div>
-
-<div class="modalPeople modal">
-    <div class="modalContent">
-        <div class="modalInfo modal_content">
-            <div class="cardClose modal_close">&times;</div>
-
-        </div>
-    </div>
-</div>
-
 </body>
-<script src="../js/home_works.js"></script>
+<script src="../js/card.js"></script>
 <script src="../js/modal.js"></script>
 </html>

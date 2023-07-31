@@ -25,9 +25,9 @@
             font-size: 22px
             height: 60px
             width: fit-content
-            background: $var4
+            background: $logotype
             padding: 8px
-            color: white
+            color: $var1
             border-radius: 5px
             cursor: pointer
         .menu
@@ -44,10 +44,11 @@
                 padding: 100px 20px 20px 20px
                 transition: transform 0.5s
             &_link a
-                color: $var4
+                color: $menuLink
                 text-transform: uppercase
                 &:hover
                     text-decoration: underline
+                    color: $var3
                 @media(max-width: 900px)
                     color: $var7
                     font-size: 21px
@@ -82,7 +83,7 @@
             width: 500px
         .btn-color
             border-radius: 20px
-            border-color: white
+            border-color: $var1
             @media (max-width: 1200px)
                 margin-top: 50px
             @media(max-width: 700px)
@@ -97,7 +98,7 @@
         height: 100px
         h2
             text-transform: uppercase
-            color: $var4
+            color: $var3
             font-weight: 600
 .slider_block
     padding: 100px 0
@@ -142,12 +143,12 @@
                 @media(max-width: 700px)
                     top: 30px
                 &_card
-                    color: white
+                    color: $var1
                     margin: 0 auto
                     width: 500px
                     text-align: center
                     h3
-                        color: white
+                        color: $var1
                         text-transform: uppercase
                         font-size: 22px
                     p
@@ -208,7 +209,7 @@
         text-align: center
         font-size: 22px
         text-transform: uppercase
-        color: white
+        color: $var1
 .modal_input, .btn_min
     width: 100%
     margin-top: 10px
@@ -217,3 +218,8 @@
     background: $var7
     font-size: 20px
 
+.video 
+    box-shadow: 0 0 20px $var1
+
+#js-color
+    color: $var3
